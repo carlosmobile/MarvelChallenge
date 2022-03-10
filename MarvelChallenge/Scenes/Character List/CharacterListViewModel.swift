@@ -7,8 +7,13 @@
 //
 
 import Foundation
+import RxSwift
+import RxCocoa
 
 struct CharacterListViewModel {
-    
-    //var title = ""
+
+    let characterDataContainerRegular = BehaviorRelay<CharacterDataContainer?>(value: nil)
+    let characterDataContainerSearchFilter = BehaviorRelay<CharacterDataContainer?>(value: nil)
+    let showActivityIndicator = BehaviorRelay<Bool>(value: false)
+    let isSearching = BehaviorRelay<Bool>(value: false)
 }

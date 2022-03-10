@@ -8,44 +8,87 @@
 
 import Foundation
 
+enum RequestType: Int {
+    case characterRegular
+    case characterSearch
+    case characterRegularLoadMore
+    case characterSearchLoadMore
+}
+
+
 protocol CharacterListEventHandler: AnyObject {
-    
+
     var viewModel: CharacterListViewModel { get }
-    
-    func handleViewWillAppear()
-    func handleViewWillDisappear()
+
+    func handleRequestData(from: Int, nameStartsWith: String, requestType: RequestType)
+    func handleItemSelected(character: Character)
 }
 
 protocol CharacterListResponseHandler: AnyObject {
-    
-    // func somethingRequestWillStart()
-    // func somethingRequestDidStart()
-    // func somethingRequestWillFinish()
-    // func somethingRequestDidFinish()
+
+    func characterRequestDidFinish()
+    func characterRequestError(message: String, errorType: APIError)
+    func characterRequestDataRegular(response: CharacterDataContainer)
+    func characterRequestDataSearchFilter(response: CharacterDataContainer)
 }
 
 class CharacterListPresenter: CharacterListEventHandler, CharacterListResponseHandler {
-    
+
     //MARK: Relationships
-    
+
     weak var viewController: CharacterListViewUpdatesHandler?
     var interactor: CharacterListRequestHandler!
     var wireframe: CharacterListNavigationHandler!
-
     var viewModel = CharacterListViewModel()
-    
+    var characterDataContainer: CharacterDataContainer? {
+        didSet {
+            if let characterData = characterDataContainer {
+                viewModel.characterDataContainerRegular.accept(characterData)
+                viewModel.isSearching.accept(false)
+            }
+        }
+    }
+
     //MARK: - EventHandler Protocol
-    
-    func handleViewWillAppear() {
+
+    func handleRequestData(from: Int, nameStartsWith: String, requestType: RequestType) {
+
+        var offset: Int?
+
+        switch requestType {
+        case .characterRegular, .characterSearch:
+            viewModel.showActivityIndicator.accept(true)
+            offset = 0
+        case .characterRegularLoadMore, .characterSearchLoadMore:
+            offset = from
+        }
+
+        interactor.requestCharacters(offset, nameStartsWith)
     }
-    
-    func handleViewWillDisappear() {
+
+    func handleItemSelected(character: Character) {
+        wireframe.pushCharacterDetail(character)
     }
-    
+
     //MARK: - ResponseHandler Protocol
-    
-    // func somethingRequestWillStart(){}
-    // func somethingRequestDidStart(){}
-    // func somethingRequestWillFinish(){}
-    // func somethingRequestDidFinish(){}
+
+    func characterRequestDidFinish() {
+        viewModel.showActivityIndicator.accept(false)
+    }
+
+    func characterRequestError(message: String, errorType: APIError) {
+        viewController?.updateCharacterListViewWithAlert(message, errorType)
+    }
+
+    func characterRequestDataRegular(response: CharacterDataContainer) {
+        viewModel.characterDataContainerRegular.accept(response)
+        viewModel.isSearching.accept(false)
+        viewController?.updateCharacterListView()
+    }
+
+    func characterRequestDataSearchFilter(response: CharacterDataContainer) {
+        viewModel.characterDataContainerSearchFilter.accept(response)
+        viewModel.isSearching.accept(true)
+        viewController?.updateCharacterListView()
+    }
 }

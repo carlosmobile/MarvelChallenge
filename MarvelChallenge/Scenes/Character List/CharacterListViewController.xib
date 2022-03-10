@@ -1,35 +1,56 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11134" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11106"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="CharacterListViewController" customModuleProvider="target">
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="CharacterListViewController" customModule="MarvelChallenge" customModuleProvider="target">
             <connections>
-                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+                <outlet property="characterTableView" destination="NkJ-t9-Egt" id="Ahh-lL-d4W"/>
+                <outlet property="characterTableViewBottomConstraint" destination="hIQ-k2-WoQ" id="9z4-xc-D6T"/>
+                <outlet property="searchFooter" destination="BRJ-tq-DIE" id="hOV-sa-0Td"/>
+                <outlet property="searchFooterBottomConstraint" destination="5mx-wC-dzm" id="JF8-Cq-lLd"/>
+                <outlet property="view" destination="d3K-QW-RJg" id="rIv-YA-nRr"/>
             </connections>
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
-            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="d3K-QW-RJg">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="CharacterList Module" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xTS-Lm-x1h">
-                    <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                    <nil key="textColor"/>
-                    <nil key="highlightedColor"/>
-                </label>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="NkJ-t9-Egt">
+                    <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                </tableView>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BRJ-tq-DIE" customClass="SearchFooter" customModule="Marvel" customModuleProvider="target">
+                    <rect key="frame" x="0.0" y="818" width="414" height="44"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="44" id="fTm-UP-XHB"/>
+                    </constraints>
+                </view>
             </subviews>
+            <viewLayoutGuide key="safeArea" id="iq9-VT-Ibk"/>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
-                <constraint firstItem="xTS-Lm-x1h" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="3J4-ad-Bmb"/>
-                <constraint firstAttribute="trailing" secondItem="xTS-Lm-x1h" secondAttribute="trailing" id="5nC-Rh-JzG"/>
-                <constraint firstItem="xTS-Lm-x1h" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="ZbZ-UJ-zx1"/>
-                <constraint firstAttribute="bottom" secondItem="xTS-Lm-x1h" secondAttribute="bottom" id="oTG-sh-qtZ"/>
+                <constraint firstItem="BRJ-tq-DIE" firstAttribute="bottom" secondItem="iq9-VT-Ibk" secondAttribute="bottom" id="5mx-wC-dzm"/>
+                <constraint firstItem="NkJ-t9-Egt" firstAttribute="leading" secondItem="iq9-VT-Ibk" secondAttribute="leading" id="8re-3P-u7k"/>
+                <constraint firstItem="NkJ-t9-Egt" firstAttribute="top" secondItem="iq9-VT-Ibk" secondAttribute="top" id="bwX-9n-yQf"/>
+                <constraint firstItem="BRJ-tq-DIE" firstAttribute="trailing" secondItem="iq9-VT-Ibk" secondAttribute="trailing" id="c6P-MX-P6f"/>
+                <constraint firstItem="BRJ-tq-DIE" firstAttribute="leading" secondItem="iq9-VT-Ibk" secondAttribute="leading" id="e6K-Np-BME"/>
+                <constraint firstItem="iq9-VT-Ibk" firstAttribute="bottom" secondItem="NkJ-t9-Egt" secondAttribute="bottom" id="hIQ-k2-WoQ"/>
+                <constraint firstItem="NkJ-t9-Egt" firstAttribute="trailing" secondItem="iq9-VT-Ibk" secondAttribute="trailing" id="kag-VV-ElJ"/>
             </constraints>
-            <point key="canvasLocation" x="-207" y="-31"/>
+            <point key="canvasLocation" x="-1006" y="-4"/>
         </view>
     </objects>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
 </document>

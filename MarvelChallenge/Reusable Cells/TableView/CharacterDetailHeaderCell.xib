@@ -10,7 +10,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="CharacterDetailHeaderCell" rowHeight="454" id="kA8-EA-t2S" customClass="CharacterDetailHeaderCell" customModule="Marvel" customModuleProvider="target">
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="CharacterDetailHeaderCell" rowHeight="454" id="kA8-EA-t2S" customClass="CharacterDetailHeaderCell" customModule="MarvelChallenge" customModuleProvider="target">
             <rect key="frame" x="0.0" y="0.0" width="320" height="454"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="kA8-EA-t2S" id="OTq-lk-Qlt">
@@ -46,7 +46,7 @@
                             <color key="titleColor" systemColor="scrollViewTexturedBackgroundColor"/>
                         </state>
                         <connections>
-                            <action selector="wikiAction:" destination="kA8-EA-t2S" eventType="touchUpInside" id="2du-Wb-YLQ"/>
+                            <action selector="wikiAction:" destination="kA8-EA-t2S" eventType="touchUpInside" id="qOt-aX-Ljj"/>
                         </connections>
                     </button>
                 </subviews>
@@ -73,7 +73,7 @@
                 <outlet property="characterNameLabel" destination="vEx-yu-BaX" id="WsI-pe-Tmd"/>
                 <outlet property="wikiButton" destination="zBh-FN-eGW" id="VZ2-fM-MYX"/>
             </connections>
-            <point key="canvasLocation" x="-310.14492753623193" y="139.28571428571428"/>
+            <point key="canvasLocation" x="-125" y="123"/>
         </tableViewCell>
     </objects>
     <resources>

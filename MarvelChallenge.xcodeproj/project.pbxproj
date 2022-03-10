@@ -79,6 +79,10 @@
 		68BC48AF27DAA1E000600E77 /* DetailCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 68BC48AD27DAA1E000600E77 /* DetailCollectionViewCell.xib */; };
 		68BC48B127DAA35600600E77 /* LoaderSpinnerCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68BC48B027DAA35600600E77 /* LoaderSpinnerCollectionViewCell.swift */; };
 		68BC48B627DAA6DD00600E77 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 68BC48B827DAA6DD00600E77 /* Localizable.strings */; };
+		68BC48BE27DABA8200600E77 /* ExtendDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68BC48BC27DABA8200600E77 /* ExtendDetailViewController.swift */; };
+		68BC48BF27DABA8200600E77 /* ExtendDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 68BC48BD27DABA8200600E77 /* ExtendDetailViewController.xib */; };
+		68BC48C227DABBE300600E77 /* CharacterWikiViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68BC48C027DABBE300600E77 /* CharacterWikiViewController.swift */; };
+		68BC48C327DABBE300600E77 /* CharacterWikiViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 68BC48C127DABBE300600E77 /* CharacterWikiViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -173,6 +177,10 @@
 		68BC48B327DAA69D00600E77 /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
 		68BC48B727DAA6DD00600E77 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		68BC48B927DAA6DE00600E77 /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/Localizable.strings; sourceTree = "<group>"; };
+		68BC48BC27DABA8200600E77 /* ExtendDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtendDetailViewController.swift; sourceTree = "<group>"; };
+		68BC48BD27DABA8200600E77 /* ExtendDetailViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ExtendDetailViewController.xib; sourceTree = "<group>"; };
+		68BC48C027DABBE300600E77 /* CharacterWikiViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterWikiViewController.swift; sourceTree = "<group>"; };
+		68BC48C127DABBE300600E77 /* CharacterWikiViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CharacterWikiViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -260,6 +268,8 @@
 		68BC481627D9347700600E77 /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
+				68BC48BB27DABA1F00600E77 /* Character Wiki */,
+				68BC48BA27DABA0E00600E77 /* Extend Detail */,
 				68BC481E27D934EA00600E77 /* Login API */,
 				68BC481F27D934F400600E77 /* Character List */,
 				68BC489327DA9EBF00600E77 /* Character Detail */,
@@ -418,6 +428,24 @@
 			path = CollectionView;
 			sourceTree = "<group>";
 		};
+		68BC48BA27DABA0E00600E77 /* Extend Detail */ = {
+			isa = PBXGroup;
+			children = (
+				68BC48BC27DABA8200600E77 /* ExtendDetailViewController.swift */,
+				68BC48BD27DABA8200600E77 /* ExtendDetailViewController.xib */,
+			);
+			path = "Extend Detail";
+			sourceTree = "<group>";
+		};
+		68BC48BB27DABA1F00600E77 /* Character Wiki */ = {
+			isa = PBXGroup;
+			children = (
+				68BC48C027DABBE300600E77 /* CharacterWikiViewController.swift */,
+				68BC48C127DABBE300600E77 /* CharacterWikiViewController.xib */,
+			);
+			path = "Character Wiki";
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -534,11 +562,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				68BC48BF27DABA8200600E77 /* ExtendDetailViewController.xib in Resources */,
 				68BC487827D9759A00600E77 /* LoadingCell.xib in Resources */,
 				68BC48B627DAA6DD00600E77 /* Localizable.strings in Resources */,
 				68BC487027D939F200600E77 /* CustomAlertViewController.xib in Resources */,
 				68BC483B27D9350B00600E77 /* CharacterListViewController.xib in Resources */,
 				68BC48A027DA9F1A00600E77 /* CharacterDetailViewController.xib in Resources */,
+				68BC48C327DABBE300600E77 /* CharacterWikiViewController.xib in Resources */,
 				68BC47C427D9294D00600E77 /* LaunchScreen.storyboard in Resources */,
 				68BC47C127D9294D00600E77 /* Assets.xcassets in Resources */,
 				68BC48AF27DAA1E000600E77 /* DetailCollectionViewCell.xib in Resources */,
@@ -577,6 +607,7 @@
 				68BC487327D9758400600E77 /* CharacterListCell.swift in Sources */,
 				68BC483727D9350B00600E77 /* CharacterListBuilder.swift in Sources */,
 				68BC482A27D9350200600E77 /* LoginAPIPresenter.swift in Sources */,
+				68BC48C227DABBE300600E77 /* CharacterWikiViewController.swift in Sources */,
 				68BC485F27D9376800600E77 /* SessionProtocol.swift in Sources */,
 				68BC487727D9759A00600E77 /* LoadingCell.swift in Sources */,
 				68BC485627D9371000600E77 /* APIRequest.swift in Sources */,
@@ -589,6 +620,7 @@
 				68BC483827D9350B00600E77 /* CharacterListViewController.swift in Sources */,
 				68BC486527D9391C00600E77 /* STLoaderSpinner.swift in Sources */,
 				68BC489F27DA9F1A00600E77 /* CharacterDetailViewModel.swift in Sources */,
+				68BC48BE27DABA8200600E77 /* ExtendDetailViewController.swift in Sources */,
 				68BC488927D977B400600E77 /* SearchFooter.swift in Sources */,
 				68BC484F27D936C400600E77 /* Alert.swift in Sources */,
 				68BC488227D9768D00600E77 /* ImageDownload+UIImageView.swift in Sources */,

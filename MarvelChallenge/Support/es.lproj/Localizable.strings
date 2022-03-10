@@ -1,0 +1,34 @@
+/* 
+  Localizable.strings
+  MarvelChallenge
+
+  Created by Carlos Butrón on 10/3/22.
+  
+*/
+
+"loading" = "Cargando...";
+"noInternet" = "Fallo en la conexión a internet";
+"errorTitle" = "Error";
+"errorDecodeResponse" = "Failed to decode response";
+"errorNetworkRequest" = "Error perform network request";
+"invalidCredentials" = "Invalid credentials";
+"ok" = "OK";
+"close" = "Cerrar";
+"retry" = "Reintentar";
+"back" = "Volver";
+"keysFails" = "Public key or private key incorrect";
+"publicKey" = "Public key";
+"privateKey" = "Private key";
+"errorWritingKey" = "escribe tu key aquí";
+"loginAPITitle" = "Comprobar Keys";
+"loginButtonTitle" = "Enviar keys";
+"charactersTitle" = "Marvel personajes";
+"noDescription" = "Sin descripción";
+"searchBarPlaceholder" = "Buscar por nombre";
+"detailTitle" = "Detalle personaje";
+"noItemsMatch" = "No hay coincidencias";
+"charactersFooterCount" = "%d personajes de %d";
+"connectionFailedTitle" = "Connection failed!";
+"connectionFailedMessage" = "There may be a problem in your internet connection";
+"visitWiki" = "Más info en wiki";
+"visitWikiNotAvailable" = "Wiki no disponible";

@@ -19,10 +19,14 @@ class CharacterDetailWireframe: CharacterDetailNavigationHandler {
     weak var viewController: CharacterDetailViewController?
 
     func presenterExtenderDetail(_ extendedDetail: Item) {
-
+        let vc = ExtendDetailViewController()
+        vc.extendDetailData = extendedDetail
+        viewController?.present(vc, animated: true, completion: nil)
     }
 
     func presenterCharacterWiki(_ wikiURL: String) {
-
+        let vc = CharacterWikiViewController()
+        vc.characterWikiURL = wikiURL
+        viewController?.present(vc, animated: true, completion: nil)
     }
 }

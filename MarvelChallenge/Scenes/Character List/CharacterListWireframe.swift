@@ -9,11 +9,15 @@
 import UIKit
 
 protocol CharacterListNavigationHandler: AnyObject {
-    
-    // Include methods to present or dismiss
+
+    func pushCharacterDetail(_ character: Character)
 }
 
 class CharacterListWireframe: CharacterListNavigationHandler {
-    
+
     weak var viewController: CharacterListViewController?
+
+    func pushCharacterDetail(_ character: Character) {
+        // navigate to detail
+    }
 }

@@ -52,6 +52,14 @@
 		68BC486927D9397900600E77 /* CustomAlert+UIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68BC486827D9397900600E77 /* CustomAlert+UIViewController.swift */; };
 		68BC486F27D939F200600E77 /* CustomAlertViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68BC486D27D939F200600E77 /* CustomAlertViewController.swift */; };
 		68BC487027D939F200600E77 /* CustomAlertViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 68BC486E27D939F200600E77 /* CustomAlertViewController.xib */; };
+		68BC487327D9758400600E77 /* CharacterListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68BC487127D9758400600E77 /* CharacterListCell.swift */; };
+		68BC487427D9758400600E77 /* CharacterListCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 68BC487227D9758400600E77 /* CharacterListCell.xib */; };
+		68BC487727D9759A00600E77 /* LoadingCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68BC487527D9759A00600E77 /* LoadingCell.swift */; };
+		68BC487827D9759A00600E77 /* LoadingCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 68BC487627D9759A00600E77 /* LoadingCell.xib */; };
+		68BC488227D9768D00600E77 /* ImageDownload+UIImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68BC488127D9768D00600E77 /* ImageDownload+UIImageView.swift */; };
+		68BC488527D9775600600E77 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 68BC488427D9775600600E77 /* Kingfisher */; };
+		68BC488727D9779800600E77 /* AutoSearchTimer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68BC488627D9779800600E77 /* AutoSearchTimer.swift */; };
+		68BC488927D977B400600E77 /* SearchFooter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68BC488827D977B400600E77 /* SearchFooter.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -118,6 +126,13 @@
 		68BC486827D9397900600E77 /* CustomAlert+UIViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CustomAlert+UIViewController.swift"; sourceTree = "<group>"; };
 		68BC486D27D939F200600E77 /* CustomAlertViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomAlertViewController.swift; sourceTree = "<group>"; };
 		68BC486E27D939F200600E77 /* CustomAlertViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CustomAlertViewController.xib; sourceTree = "<group>"; };
+		68BC487127D9758400600E77 /* CharacterListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterListCell.swift; sourceTree = "<group>"; };
+		68BC487227D9758400600E77 /* CharacterListCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CharacterListCell.xib; sourceTree = "<group>"; };
+		68BC487527D9759A00600E77 /* LoadingCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingCell.swift; sourceTree = "<group>"; };
+		68BC487627D9759A00600E77 /* LoadingCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LoadingCell.xib; sourceTree = "<group>"; };
+		68BC488127D9768D00600E77 /* ImageDownload+UIImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ImageDownload+UIImageView.swift"; sourceTree = "<group>"; };
+		68BC488627D9779800600E77 /* AutoSearchTimer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AutoSearchTimer.swift; sourceTree = "<group>"; };
+		68BC488827D977B400600E77 /* SearchFooter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchFooter.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -125,6 +140,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				68BC488527D9775600600E77 /* Kingfisher in Frameworks */,
 				68BC484327D9358100600E77 /* RxSwift in Frameworks */,
 				68BC484127D9358100600E77 /* RxCocoa in Frameworks */,
 				68BC483E27D9354100600E77 /* KeychainAccess in Frameworks */,
@@ -211,6 +227,10 @@
 		68BC481727D9347D00600E77 /* Reusable Cells */ = {
 			isa = PBXGroup;
 			children = (
+				68BC487127D9758400600E77 /* CharacterListCell.swift */,
+				68BC487227D9758400600E77 /* CharacterListCell.xib */,
+				68BC487527D9759A00600E77 /* LoadingCell.swift */,
+				68BC487627D9759A00600E77 /* LoadingCell.xib */,
 			);
 			path = "Reusable Cells";
 			sourceTree = "<group>";
@@ -234,6 +254,9 @@
 				68BC486427D9391C00600E77 /* STLoaderSpinner.swift */,
 				68BC486627D9394900600E77 /* BorderBottom+UITextField.swift */,
 				68BC486827D9397900600E77 /* CustomAlert+UIViewController.swift */,
+				68BC488127D9768D00600E77 /* ImageDownload+UIImageView.swift */,
+				68BC488627D9779800600E77 /* AutoSearchTimer.swift */,
+				68BC488827D977B400600E77 /* SearchFooter.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -324,6 +347,7 @@
 				68BC483D27D9354100600E77 /* KeychainAccess */,
 				68BC484027D9358100600E77 /* RxCocoa */,
 				68BC484227D9358100600E77 /* RxSwift */,
+				68BC488427D9775600600E77 /* Kingfisher */,
 			);
 			productName = MarvelChallenge;
 			productReference = 68BC47B427D9294B00600E77 /* MarvelChallenge.app */;
@@ -400,6 +424,7 @@
 			packageReferences = (
 				68BC483C27D9354100600E77 /* XCRemoteSwiftPackageReference "KeychainAccess" */,
 				68BC483F27D9358000600E77 /* XCRemoteSwiftPackageReference "RxSwift" */,
+				68BC488327D9775600600E77 /* XCRemoteSwiftPackageReference "Kingfisher" */,
 			);
 			productRefGroup = 68BC47B527D9294B00600E77 /* Products */;
 			projectDirPath = "";
@@ -417,11 +442,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				68BC487827D9759A00600E77 /* LoadingCell.xib in Resources */,
 				68BC487027D939F200600E77 /* CustomAlertViewController.xib in Resources */,
 				68BC483B27D9350B00600E77 /* CharacterListViewController.xib in Resources */,
 				68BC47C427D9294D00600E77 /* LaunchScreen.storyboard in Resources */,
 				68BC47C127D9294D00600E77 /* Assets.xcassets in Resources */,
 				68BC482827D9350200600E77 /* LoginAPIViewController.xib in Resources */,
+				68BC487427D9758400600E77 /* CharacterListCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -448,9 +475,11 @@
 			files = (
 				68BC484927D9360500600E77 /* MarvelUrl.swift in Sources */,
 				68BC486127D937DF00600E77 /* ShakingTextField.swift in Sources */,
+				68BC487327D9758400600E77 /* CharacterListCell.swift in Sources */,
 				68BC483727D9350B00600E77 /* CharacterListBuilder.swift in Sources */,
 				68BC482A27D9350200600E77 /* LoginAPIPresenter.swift in Sources */,
 				68BC485F27D9376800600E77 /* SessionProtocol.swift in Sources */,
+				68BC487727D9759A00600E77 /* LoadingCell.swift in Sources */,
 				68BC485627D9371000600E77 /* APIRequest.swift in Sources */,
 				68BC484727D935F500600E77 /* CharacterItems.swift in Sources */,
 				68BC483A27D9350B00600E77 /* CharacterListWireframe.swift in Sources */,
@@ -460,7 +489,9 @@
 				68BC482727D9350200600E77 /* LoginAPIBuilder.swift in Sources */,
 				68BC483827D9350B00600E77 /* CharacterListViewController.swift in Sources */,
 				68BC486527D9391C00600E77 /* STLoaderSpinner.swift in Sources */,
+				68BC488927D977B400600E77 /* SearchFooter.swift in Sources */,
 				68BC484F27D936C400600E77 /* Alert.swift in Sources */,
+				68BC488227D9768D00600E77 /* ImageDownload+UIImageView.swift in Sources */,
 				68BC483927D9350B00600E77 /* CharacterListInteractor.swift in Sources */,
 				68BC483627D9350B00600E77 /* CharacterListPresenter.swift in Sources */,
 				68BC485D27D9374200600E77 /* APIClient.swift in Sources */,
@@ -473,6 +504,7 @@
 				68BC481D27D934D200600E77 /* APIKeys.swift in Sources */,
 				68BC486F27D939F200600E77 /* CustomAlertViewController.swift in Sources */,
 				68BC486927D9397900600E77 /* CustomAlert+UIViewController.swift in Sources */,
+				68BC488727D9779800600E77 /* AutoSearchTimer.swift in Sources */,
 				68BC482D27D9350200600E77 /* LoginAPIInteractor.swift in Sources */,
 				68BC485427D9370300600E77 /* APIConfiguration.swift in Sources */,
 				68BC47BA27D9294B00600E77 /* SceneDelegate.swift in Sources */,
@@ -647,7 +679,6 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -673,7 +704,6 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -825,6 +855,14 @@
 				minimumVersion = 6.0.0;
 			};
 		};
+		68BC488327D9775600600E77 /* XCRemoteSwiftPackageReference "Kingfisher" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/onevcat/Kingfisher";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 7.0.0;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -842,6 +880,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 68BC483F27D9358000600E77 /* XCRemoteSwiftPackageReference "RxSwift" */;
 			productName = RxSwift;
+		};
+		68BC488427D9775600600E77 /* Kingfisher */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 68BC488327D9775600600E77 /* XCRemoteSwiftPackageReference "Kingfisher" */;
+			productName = Kingfisher;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

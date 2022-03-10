@@ -25,7 +25,9 @@ class STLoaderSpinner {
     static let sharedInstance = STLoaderSpinner()
 
     func showActivityIndicator(title: String) {
-        if let window = UIApplication.shared.windows.first(where: { (window) -> Bool in window.isKeyWindow}) {
+        let scenes = UIApplication.shared.connectedScenes
+        let windowScene = scenes.first as? UIWindowScene
+        if let window = windowScene?.windows.first(where: { (window) -> Bool in window.isKeyWindow}) {
             container.frame = CGRect(x: 0.0, y: 0.0, width: (window.frame.width), height: (window.frame.height))
             container.backgroundColor = .clear
             window.addSubview(container)

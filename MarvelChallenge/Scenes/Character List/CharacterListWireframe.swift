@@ -18,6 +18,7 @@ class CharacterListWireframe: CharacterListNavigationHandler {
     weak var viewController: CharacterListViewController?
 
     func pushCharacterDetail(_ character: Character) {
-        // navigate to detail
+        let vc = CharacterDetailBuilder.build(character)
+        viewController?.navigationController?.pushViewController(vc, animated: true)
     }
 }

@@ -9,7 +9,7 @@ import UIKit
 
 enum ThemeColor: Int {
 
-    case `default`, black, white, grayMedium, graySelectedCell,
+    case `default`, white, grayMedium, graySelectedCell,
     grayLight, graySoft, redError, blackMV
 
     //MARK: - Colors
@@ -17,8 +17,6 @@ enum ThemeColor: Int {
     var MVColor: UIColor {
         switch self {
         case .default:
-            return #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)
-        case .black:
             return #colorLiteral(red: 0, green: 0, blue: 0, alpha: 1)
         case .white:
             return #colorLiteral(red: 0.9492354989, green: 0.9486114383, blue: 0.9704449773, alpha: 1)
@@ -41,7 +39,7 @@ enum ThemeColor: Int {
 
 enum ThemeImage: String {
 
-    case `default`, mvDefaultNoImage, mvFabUnselectedImage, mvFabSelectedImage, mvNoInternet
+    case `default`, mvDefaultNoImage, mvNoInternet
 
     //MARK: - Images
 
@@ -51,10 +49,6 @@ enum ThemeImage: String {
             return "default"
         case .mvDefaultNoImage:
             return "mvDefault"
-        case .mvFabUnselectedImage:
-            return "fabUnselected"
-        case .mvFabSelectedImage:
-            return "fabSelected"
         case .mvNoInternet:
             return "mvDeadpool"
         }

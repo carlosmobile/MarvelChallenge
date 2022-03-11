@@ -53,6 +53,7 @@
                                 </label>
                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="O6p-3R-cJy">
                                     <rect key="frame" x="336" y="62" width="60" height="60"/>
+                                    <accessibility key="accessibilityConfiguration" identifier="closeAction"/>
                                     <constraints>
                                         <constraint firstAttribute="width" secondItem="O6p-3R-cJy" secondAttribute="height" multiplier="1:1" id="6Kg-1t-8JK"/>
                                     </constraints>

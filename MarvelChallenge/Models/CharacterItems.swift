@@ -22,9 +22,8 @@ struct ItemDataContainer: Codable {
     var formatType: ItemType {
         if type == nil {
             return ItemType.Error
-        } else {
-            return type!
         }
+        return type!
     }
 }
 
@@ -37,9 +36,8 @@ struct Item: Codable {
     var formatDescription: String {
         if description == nil || description == "" {
             return "noDescription".localized
-        } else {
-            return description!
         }
+        return description!
     }
 }
 

@@ -18,6 +18,7 @@ class LoginAPIInteractor: LoginAPIRequestHandler {
     //MARK: Relationships
 
     weak var presenter: LoginAPIResponseHandler?
+    var isConnected: Bool = true
 
     //MARK: - RequestHandler Protocol
 
@@ -25,7 +26,11 @@ class LoginAPIInteractor: LoginAPIRequestHandler {
 
         let getRequest = APIRequest(method: .get, path: Server.charactersEndpointURL)
 
-        if MVReachability.isConnected() {
+        if !MVReachability.isConnected() {
+            isConnected = false
+        }
+
+        if isConnected {
             APIClient().perform(request: getRequest) { result in
                 DispatchQueue.main.async {
                     self.presenter?.apiRequestDidFinish()

@@ -36,11 +36,10 @@ class SearchFooter: UIView {
     func setIsFilteringToShow(filteredItemCount: Int, of totalItemCount: Int) {
         if (filteredItemCount == 0) {
             label.text = "noItemsMatch".localized
-            showFooter()
         } else {
             label.text = String(format: "charactersFooterCount".localized, filteredItemCount, totalItemCount)
-            showFooter()
         }
+        showFooter()
     }
 
     private func hideFooter() {

@@ -49,7 +49,7 @@ class CharacterDetailPresenter: CharacterDetailEventHandler, CharacterDetailResp
     }
 
     func handleItemSelected(extendedDetail: Item) {
-        wireframe.presenterExtenderDetail(extendedDetail)
+        wireframe.presenterExtendedDetail(extendedDetail)
     }
 
     func handleWikiSelected(_ wikiURL: String) {

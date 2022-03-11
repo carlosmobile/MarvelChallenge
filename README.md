@@ -108,7 +108,7 @@ Structs:
 - [APIError](MarvelChallenge/Networking/APIError.swift): Enum to handle error type.<br>
 - [APIClient](MarvelChallenge/Networking/APIClient.swift): Class to implement URLSession.<br>
 - [APIKeys](MarvelChallenge/Networking/APIKeys.swift): Class to implement Marvel API keys security and requirements.<br>
-- [STReachability](MarvelChallenge/Networking/MVReachability.swift): Class to control internet reachability.<br>
+- [MVReachability](MarvelChallenge/Networking/MVReachability.swift): Class to control internet reachability.<br>
 
 <br><br>
 # XCTests

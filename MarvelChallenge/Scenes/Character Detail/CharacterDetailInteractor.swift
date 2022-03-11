@@ -18,6 +18,7 @@ class CharacterDetailInteractor: CharacterDetailRequestHandler {
     //MARK: Relationships
 
     weak var presenter: CharacterDetailResponseHandler?
+    var isConnected: Bool = true
 
     //MARK: - RequestHandler Protocol
 
@@ -26,7 +27,11 @@ class CharacterDetailInteractor: CharacterDetailRequestHandler {
         let getRequest = APIRequest(method: .get, path: Server.charactersEndpointURL + String("/\(id)") + type.pathType())
         getRequest.queryItems?.append(URLQueryItem(name: "offset", value: String(offset)))
 
-        if MVReachability.isConnected() {
+        if !MVReachability.isConnected() {
+            isConnected = false
+        }
+
+        if isConnected {
             APIClient().perform(request: getRequest) { result in
                 DispatchQueue.main.async {
                     self.presenter?.characterDetailRequestDidFinish()
@@ -52,5 +57,4 @@ class CharacterDetailInteractor: CharacterDetailRequestHandler {
                                                    errorType: .noInternet)
         }
     }
-
 }

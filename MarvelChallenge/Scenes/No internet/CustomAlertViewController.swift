@@ -27,6 +27,7 @@ class CustomAlertViewController: UIViewController {
         addCornerRadiusWithShadowToButton(color: .lightGray, borderColor: .clear, cornerRadius: 10)
         titleLabel.text = alertTitle
         messageLabel.text = alertMessage
+        imageItem = UIImage(named: ThemeImage.mvNoInternet.MVImage)
         okButton.setTitle("retry".localized, for: .normal)
     }
 

@@ -29,6 +29,7 @@
                 </wkWebView>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IVV-bk-6a0">
                     <rect key="frame" x="344" y="54" width="60" height="60"/>
+                    <accessibility key="accessibilityConfiguration" identifier="closeAction"/>
                     <constraints>
                         <constraint firstAttribute="width" secondItem="IVV-bk-6a0" secondAttribute="height" multiplier="1:1" id="IlV-XS-qQl"/>
                     </constraints>

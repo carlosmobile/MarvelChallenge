@@ -45,8 +45,7 @@ class APIKeys {
         if let publicKey = keychain["publicKey"], let privateKey = keychain["privateKey"] {
             let hash = md5(string: String(format: "%@%@%@", String(timestamp), privateKey, publicKey))
             return (timestamp, publicKey, hash)
-        } else {
-            return (timestamp, "", "")
         }
+        return (timestamp, "", "")
     }
 }

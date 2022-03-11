@@ -18,6 +18,7 @@ class CharacterListInteractor: CharacterListRequestHandler {
     //MARK: Relationships
 
     weak var presenter: CharacterListResponseHandler?
+    var isConnected: Bool = true
 
     //MARK: - RequestHandler Protocol
 
@@ -36,7 +37,11 @@ class CharacterListInteractor: CharacterListRequestHandler {
             getRequest.queryItems?.append(URLQueryItem(name: "nameStartsWith", value: nameStartsWith))
         }
 
-        if MVReachability.isConnected() {
+        if !MVReachability.isConnected() {
+            isConnected = false
+        }
+
+        if isConnected {
             APIClient().perform(request: getRequest) { result in
                 DispatchQueue.main.async {
                     self.presenter?.characterRequestDidFinish()

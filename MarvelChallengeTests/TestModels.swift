@@ -112,6 +112,8 @@ class TestModels: XCTestCase {
         } catch {
             XCTAssert(false)
         }
+        XCTAssertNotNil(ItemType.pathType(ItemType.Error))
+        XCTAssertNotNil(ItemType.title(ItemType.Error))
     }
 
     func testMarvelImageDecoding() throws {

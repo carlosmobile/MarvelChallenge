@@ -2,34 +2,88 @@
 //  CharacterListPresenterTest.swift
 //  MarvelChallengeTests
 //
-//  Created by Carlos Butrón on 10/3/22.
+//  Created by Carlos Butrón on 11/3/22.
 //
 
 import XCTest
+@testable import MarvelChallenge
 
 class CharacterListPresenterTest: XCTestCase {
 
-    override func setUpWithError() throws {
-        // Put setup code here. This method is called before the invocation of each test method in the class.
-    }
+    class MockInterface: CharacterListViewController {
+        override func updateCharacterListViewWithAlert(_ message: String, _ errorType: APIError) {
 
-    override func tearDownWithError() throws {
-        // Put teardown code here. This method is called after the invocation of each test method in the class.
-    }
+        }
 
-    func testExample() throws {
-        // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
-        // Any test you write for XCTest can be annotated as throws and async.
-        // Mark your test throws to produce an unexpected failure when your test encounters an uncaught error.
-        // Mark your test async to allow awaiting for asynchronous code to complete. Check the results with assertions afterwards.
-    }
+        override func updateCharacterListView() {
 
-    func testPerformanceExample() throws {
-        // This is an example of a performance test case.
-        self.measure {
-            // Put the code you want to measure the time of here.
         }
     }
 
+    class MockInteractor: CharacterListInteractor {
+        override func requestCharacters(_ from: Int?, _ nameStartsWith: String) {
+
+        }
+    }
+
+    class MockWireframe: CharacterListWireframe {
+        override func pushCharacterDetail(_ character: Character) {
+
+        }
+    }
+
+    var presenter: CharacterListPresenter?
+    var mockInterface: MockInterface?
+    var mockWireframe: MockWireframe?
+    var mockInteractor: MockInteractor?
+
+    override func setUp() {
+        super.setUp()
+        presenter = CharacterListPresenter()
+        mockInterface = MockInterface()
+        mockWireframe = MockWireframe()
+        mockInteractor = MockInteractor()
+        presenter?.wireframe = mockWireframe
+        presenter?.interactor = mockInteractor
+    }
+
+    override func tearDown() {
+        super.tearDown()
+    }
+
+    func testHandleRequestData() {
+        presenter?.handleRequestData(from: 0, nameStartsWith: "a", requestType: RequestType.characterRegular)
+    }
+
+    func testHandleItemSelected() {
+        let json = CharacterJSON
+        if let data = try? JSONSerialization.data(withJSONObject: json, options: .prettyPrinted) {
+            let character = try? JSONDecoder().decode(Character.self, from: data)
+            presenter?.handleItemSelected(character: character!)
+        }
+    }
+
+    func testCharacterRequestDidFinish() {
+        presenter?.characterRequestDidFinish()
+    }
+
+    func testCharacterRequestError() {
+        presenter?.characterRequestError(message: "", errorType: APIError.decodingFailure)
+    }
+
+    func testCharacterRequestDataRegular() {
+        let json = CharacterDataContainerJSON
+        if let data = try? JSONSerialization.data(withJSONObject: json, options: .prettyPrinted) {
+            let characterDataContainer = try? JSONDecoder().decode(CharacterDataContainer.self, from: data)
+            presenter?.characterRequestDataRegular(response: characterDataContainer!)
+        }
+    }
+
+    func testCharacterRequestDataSearchFilter() {
+        let json = CharacterDataContainerJSON
+        if let data = try? JSONSerialization.data(withJSONObject: json, options: .prettyPrinted) {
+            let characterDataContainer = try? JSONDecoder().decode(CharacterDataContainer.self, from: data)
+            presenter?.characterRequestDataSearchFilter(response: characterDataContainer!)
+        }
+    }
 }

@@ -10,7 +10,7 @@ import UIKit
 
 protocol CharacterDetailNavigationHandler: AnyObject {
 
-    func presenterExtenderDetail(_ extendedDetail: Item)
+    func presenterExtendedDetail(_ extendedDetail: Item)
     func presenterCharacterWiki(_ wikiURL: String)
 }
 
@@ -18,7 +18,7 @@ class CharacterDetailWireframe: CharacterDetailNavigationHandler {
 
     weak var viewController: CharacterDetailViewController?
 
-    func presenterExtenderDetail(_ extendedDetail: Item) {
+    func presenterExtendedDetail(_ extendedDetail: Item) {
         let vc = ExtendDetailViewController()
         vc.extendDetailData = extendedDetail
         viewController?.present(vc, animated: true, completion: nil)

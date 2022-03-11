@@ -56,11 +56,27 @@ class MarvelChallengeUITests: XCTestCase {
         XCTAssertTrue(cell.exists)
     }
 
-    func testShowCharacterDetailComicSeries() {
-        app.tables.cells.firstMatch.tap()
+    func testShowCharacterDetailNoWiki() {
+        app.tables.cells.element(boundBy: 1).tap()
         let cell = app.tables.children(matching: .cell).element(boundBy: 1)
+        cell.swipeLeft()
         cell.tap()
         XCTAssertTrue(cell.exists)
     }
 
+    func testShowCharacterWikiDetail() {
+        app.tables.cells.firstMatch.tap()
+        let cell = app.tables.children(matching: .cell).element(boundBy: 0)
+        cell.buttons["wikiButton"].tap()
+        app.buttons["closeAction"].tap()
+        XCTAssertTrue(cell.exists)
+    }
+
+    func testShowCharacterDetailComicSeries() {
+        app.tables.cells.firstMatch.tap()
+        let cell = app.tables.children(matching: .cell).element(boundBy: 1)
+        cell.tap()
+        app.buttons["closeAction"].tap()
+        XCTAssertTrue(cell.exists)
+    }
 }

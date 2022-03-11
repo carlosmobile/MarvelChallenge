@@ -18,7 +18,21 @@ class MarvelChallengeLoginUITest: XCTestCase {
         app.launch()
     }
 
-    func testLoginWithAPIKeys() {
+    func testLoginWithBadAPIKeys() {
+        let textFieldPublicKey = app.textFields["publicKeyTextField"]
+        textFieldPublicKey.tap()
+        textFieldPublicKey.typeText("a")
+        let textFieldPrivateKey = app.textFields["privateKeyTextField"]
+        textFieldPrivateKey.tap()
+        textFieldPrivateKey.typeText("a")
+        app.buttons["loginButton"].tap()
+        sleep(3)
+        app.buttons["OK"].tap()
+    }
+
+    func testLoginWithGoodAPIKeys() {
+        app.buttons["loginButton"].tap()
+        sleep(3)
         let textFieldPublicKey = app.textFields["publicKeyTextField"]
         textFieldPublicKey.tap()
         textFieldPublicKey.typeText("e3170744b203f5e2423ef9d66bcc2af5")
@@ -31,5 +45,4 @@ class MarvelChallengeLoginUITest: XCTestCase {
         let count = tablesQuery.cells.count
         XCTAssert(count > 0)
     }
-
 }

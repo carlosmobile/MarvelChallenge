@@ -11,7 +11,6 @@
 		68BC47BA27D9294B00600E77 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68BC47B927D9294B00600E77 /* SceneDelegate.swift */; };
 		68BC47C127D9294D00600E77 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 68BC47C027D9294D00600E77 /* Assets.xcassets */; };
 		68BC47C427D9294D00600E77 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 68BC47C227D9294D00600E77 /* LaunchScreen.storyboard */; };
-		68BC47CF27D9294D00600E77 /* MarvelChallengeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68BC47CE27D9294D00600E77 /* MarvelChallengeTests.swift */; };
 		68BC47D927D9294D00600E77 /* MarvelChallengeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68BC47D827D9294D00600E77 /* MarvelChallengeUITests.swift */; };
 		68BC47DB27D9294D00600E77 /* MarvelChallengeUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68BC47DA27D9294D00600E77 /* MarvelChallengeUITestsLaunchTests.swift */; };
 		68BC481D27D934D200600E77 /* APIKeys.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68BC481C27D934D200600E77 /* APIKeys.swift */; };
@@ -61,7 +60,7 @@
 		68BC488727D9779800600E77 /* AutoSearchTimer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68BC488627D9779800600E77 /* AutoSearchTimer.swift */; };
 		68BC488927D977B400600E77 /* SearchFooter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68BC488827D977B400600E77 /* SearchFooter.swift */; };
 		68BC488B27D9830100600E77 /* LoginPresenterTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68BC488A27D9830100600E77 /* LoginPresenterTest.swift */; };
-		68BC488D27D9833600600E77 /* CharacterListPresenterTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68BC488C27D9833600600E77 /* CharacterListPresenterTest.swift */; };
+		68BC488D27D9833600600E77 /* CharacterDetailPresenterTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68BC488C27D9833600600E77 /* CharacterDetailPresenterTest.swift */; };
 		68BC489027D987CE00600E77 /* DefaultValues.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68BC488F27D987CE00600E77 /* DefaultValues.swift */; };
 		68BC489227D987D800600E77 /* request_success.json in Resources */ = {isa = PBXBuildFile; fileRef = 68BC489127D987D800600E77 /* request_success.json */; };
 		68BC489B27DA9F1A00600E77 /* CharacterDetailPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68BC489427DA9F1A00600E77 /* CharacterDetailPresenter.swift */; };
@@ -83,6 +82,11 @@
 		68BC48BF27DABA8200600E77 /* ExtendDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 68BC48BD27DABA8200600E77 /* ExtendDetailViewController.xib */; };
 		68BC48C227DABBE300600E77 /* CharacterWikiViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68BC48C027DABBE300600E77 /* CharacterWikiViewController.swift */; };
 		68BC48C327DABBE300600E77 /* CharacterWikiViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 68BC48C127DABBE300600E77 /* CharacterWikiViewController.xib */; };
+		68BC48C527DAC3A500600E77 /* MarvelChallengeLoginUITest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68BC48C427DAC3A500600E77 /* MarvelChallengeLoginUITest.swift */; };
+		68BC48C727DAC66900600E77 /* TestsMarvelImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68BC48C627DAC66900600E77 /* TestsMarvelImage.swift */; };
+		68BC48C927DAC69B00600E77 /* TestModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68BC48C827DAC69B00600E77 /* TestModels.swift */; };
+		68BC48CB27DAC6D400600E77 /* test.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 68BC48CA27DAC6D400600E77 /* test.jpg */; };
+		68BC48D127DACE9700600E77 /* CharacterListPresenterTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68BC48D027DACE9700600E77 /* CharacterListPresenterTest.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -110,7 +114,6 @@
 		68BC47C327D9294D00600E77 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		68BC47C527D9294D00600E77 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		68BC47CA27D9294D00600E77 /* MarvelChallengeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MarvelChallengeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		68BC47CE27D9294D00600E77 /* MarvelChallengeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarvelChallengeTests.swift; sourceTree = "<group>"; };
 		68BC47D427D9294D00600E77 /* MarvelChallengeUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MarvelChallengeUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		68BC47D827D9294D00600E77 /* MarvelChallengeUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarvelChallengeUITests.swift; sourceTree = "<group>"; };
 		68BC47DA27D9294D00600E77 /* MarvelChallengeUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarvelChallengeUITestsLaunchTests.swift; sourceTree = "<group>"; };
@@ -157,7 +160,7 @@
 		68BC488627D9779800600E77 /* AutoSearchTimer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AutoSearchTimer.swift; sourceTree = "<group>"; };
 		68BC488827D977B400600E77 /* SearchFooter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchFooter.swift; sourceTree = "<group>"; };
 		68BC488A27D9830100600E77 /* LoginPresenterTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginPresenterTest.swift; sourceTree = "<group>"; };
-		68BC488C27D9833600600E77 /* CharacterListPresenterTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterListPresenterTest.swift; sourceTree = "<group>"; };
+		68BC488C27D9833600600E77 /* CharacterDetailPresenterTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterDetailPresenterTest.swift; sourceTree = "<group>"; };
 		68BC488F27D987CE00600E77 /* DefaultValues.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultValues.swift; sourceTree = "<group>"; };
 		68BC489127D987D800600E77 /* request_success.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = request_success.json; sourceTree = "<group>"; };
 		68BC489427DA9F1A00600E77 /* CharacterDetailPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterDetailPresenter.swift; sourceTree = "<group>"; };
@@ -181,6 +184,11 @@
 		68BC48BD27DABA8200600E77 /* ExtendDetailViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ExtendDetailViewController.xib; sourceTree = "<group>"; };
 		68BC48C027DABBE300600E77 /* CharacterWikiViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterWikiViewController.swift; sourceTree = "<group>"; };
 		68BC48C127DABBE300600E77 /* CharacterWikiViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CharacterWikiViewController.xib; sourceTree = "<group>"; };
+		68BC48C427DAC3A500600E77 /* MarvelChallengeLoginUITest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarvelChallengeLoginUITest.swift; sourceTree = "<group>"; };
+		68BC48C627DAC66900600E77 /* TestsMarvelImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestsMarvelImage.swift; sourceTree = "<group>"; };
+		68BC48C827DAC69B00600E77 /* TestModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestModels.swift; sourceTree = "<group>"; };
+		68BC48CA27DAC6D400600E77 /* test.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = test.jpg; sourceTree = "<group>"; };
+		68BC48D027DACE9700600E77 /* CharacterListPresenterTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterListPresenterTest.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -249,9 +257,11 @@
 			isa = PBXGroup;
 			children = (
 				68BC488E27D987A500600E77 /* Mocks */,
-				68BC47CE27D9294D00600E77 /* MarvelChallengeTests.swift */,
 				68BC488A27D9830100600E77 /* LoginPresenterTest.swift */,
-				68BC488C27D9833600600E77 /* CharacterListPresenterTest.swift */,
+				68BC48D027DACE9700600E77 /* CharacterListPresenterTest.swift */,
+				68BC488C27D9833600600E77 /* CharacterDetailPresenterTest.swift */,
+				68BC48C627DAC66900600E77 /* TestsMarvelImage.swift */,
+				68BC48C827DAC69B00600E77 /* TestModels.swift */,
 			);
 			path = MarvelChallengeTests;
 			sourceTree = "<group>";
@@ -259,6 +269,7 @@
 		68BC47D727D9294D00600E77 /* MarvelChallengeUITests */ = {
 			isa = PBXGroup;
 			children = (
+				68BC48C427DAC3A500600E77 /* MarvelChallengeLoginUITest.swift */,
 				68BC47D827D9294D00600E77 /* MarvelChallengeUITests.swift */,
 				68BC47DA27D9294D00600E77 /* MarvelChallengeUITestsLaunchTests.swift */,
 			);
@@ -385,6 +396,7 @@
 			children = (
 				68BC489127D987D800600E77 /* request_success.json */,
 				68BC488F27D987CE00600E77 /* DefaultValues.swift */,
+				68BC48CA27DAC6D400600E77 /* test.jpg */,
 			);
 			path = Mocks;
 			sourceTree = "<group>";
@@ -584,6 +596,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				68BC489227D987D800600E77 /* request_success.json in Resources */,
+				68BC48CB27DAC6D400600E77 /* test.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -659,10 +672,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				68BC488D27D9833600600E77 /* CharacterListPresenterTest.swift in Sources */,
+				68BC48D127DACE9700600E77 /* CharacterListPresenterTest.swift in Sources */,
+				68BC488D27D9833600600E77 /* CharacterDetailPresenterTest.swift in Sources */,
 				68BC488B27D9830100600E77 /* LoginPresenterTest.swift in Sources */,
-				68BC47CF27D9294D00600E77 /* MarvelChallengeTests.swift in Sources */,
+				68BC48C727DAC66900600E77 /* TestsMarvelImage.swift in Sources */,
 				68BC489027D987CE00600E77 /* DefaultValues.swift in Sources */,
+				68BC48C927DAC69B00600E77 /* TestModels.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -671,6 +686,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				68BC47D927D9294D00600E77 /* MarvelChallengeUITests.swift in Sources */,
+				68BC48C527DAC3A500600E77 /* MarvelChallengeLoginUITest.swift in Sources */,
 				68BC47DB27D9294D00600E77 /* MarvelChallengeUITestsLaunchTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

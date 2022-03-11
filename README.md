@@ -45,7 +45,7 @@ Example gif with iPad Pro (9.7 inch) Xcode simulator:
 
 # Architecture
 
-The architecture used to this app is [VIPER based on my own templates](https://github.com/carlosmobile/VIPER-Xcode) this templates are based in a classic VIPER twisted with Clean Swift architecture based on SOLID principles introduced by Robert C. Martin (Uncle Bob).
+The architecture used to this app is [VIPER based on my own templates](https://github.com/carlosmobile/VIPER) this templates are based in a classic VIPER twisted with Clean Swift architecture based on SOLID principles introduced by Robert C. Martin (Uncle Bob).
 
 <p align="center">
   <img src="Readme_Images/viperarch.png" width="500" height="238"/>
@@ -108,12 +108,12 @@ Structs:
 - [APIError](MarvelChallenge/Networking/APIError.swift): Enum to handle error type.<br>
 - [APIClient](MarvelChallenge/Networking/APIClient.swift): Class to implement URLSession.<br>
 - [APIKeys](MarvelChallenge/Networking/APIKeys.swift): Class to implement Marvel API keys security and requirements.<br>
-- [STReachability](MarvelChallenge/Networking/STReachability.swift): Class to control internet reachability.<br>
+- [STReachability](MarvelChallenge/Networking/MVReachability.swift): Class to control internet reachability.<br>
 
 <br><br>
 # XCTests
 
-This app test Mocked API, Presenters, Interactors, Wireframes, Models, etc.. with [XCTests](MarvelTests/) and [UITests](MarvelTests/).<br>
+This app test Mocked API, Presenters, Interactors, Wireframes, Models, etc.. with [XCTests](https://github.com/carlosmobile/MarvelChallenge/tree/develop/MarvelChallengeTests) and [UITests](https://github.com/carlosmobile/MarvelChallenge/tree/develop/MarvelChallengeUITests).<br>
 Test Coverage 91%
 
 <p align="left">
